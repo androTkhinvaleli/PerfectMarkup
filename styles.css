@@ -147,6 +147,9 @@ main{
     padding: 5vh 0;
 
 }
+#cover-container{
+    position: relative;
+}
 .cover-wraper{
     width: 95%;
 
@@ -250,6 +253,37 @@ main{
     background-image: url("./imgs/solar-system-invert.png")
 }
 
+.latest-work-wraper{
+    width: 100%;
+    height: 50px;
+    
+    display: grid;
+    grid-template-columns: 352fr 256fr 352fr;
+}
+.latest-work-wraper>div{
+    display: flex;
+    justify-content: center;
+}
+
+.line{
+    height: 0;
+    border: solid 2px black;
+    width: 100%;
+}
+.latest-work{
+    height: 48px;
+    background-color: black;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color:white;
+    width: 256px;
+    border-radius: 10px;
+    font-size: 31px; 
+    margin-top: -24px;
+    text-transform: uppercase;
+    
+}
 
 .blocks-wraper{
     width: 100%;
@@ -395,7 +429,7 @@ li:hover{
     color: white;
 }
 section{
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 /* @media only screen and (max-width: 1168px){
@@ -430,4 +464,16 @@ section{
         display: block;
     }
 
+}
+
+@media only screen and (max-width: 645px){
+    .footer-wraper{
+        grid-template-columns: 1fr;
+    }
+    .blocks-wraper{
+        grid-template-columns: 1fr;
+    }
+    .list-wraper{
+        grid-template-columns: 1fr;
+    }
 }
