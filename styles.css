@@ -2,7 +2,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    --color: #77BF8B
+    --color: #77BF8B;
+    font-family: sans-serif;
+
 }
 body{
     background-image: url('./imgs/photo6.jpeg');
@@ -42,8 +44,16 @@ header{
     width: 100%;
     display: flex;
     align-items: center;
-    font-size: 2em;
+    
     color: white;
+}
+.logo h1{
+    font-size: 33px;
+}
+.logo p{
+    color: grey;
+    margin-top: -7px;
+    font-size: 13px;
 }
 .lang{
     height: 60px;
@@ -145,6 +155,9 @@ main{
     padding: 5vh 0;
 
 }
+#cover-container{
+    position: relative;
+}
 .cover-wraper{
     width: 95%;
 
@@ -160,13 +173,24 @@ main{
     left: 0;
     transform: rotate(180deg)
 }
-.cover{ 
+.cover-item{ 
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 94px;
+}
+.cover-item > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .cover-text{
+    width: 320px;
     color: white;
-    padding: 12% 45px;
+    margin: 45px 0 0 45px;
+}
+.cover-text>h2{
+    font-size: 43px;
+    padding-bottom:20px; 
 }
 .cover-text button{
     padding: 10px 15px;
@@ -183,6 +207,7 @@ main{
     align-items: center;
     background-color: dimgray;
     border-radius: 50%;
+    margin-right: 45px;
 }
 .image img{
     height: 380px;
@@ -197,6 +222,11 @@ main{
     /* background-color: aqua; */
     grid-gap:20px; 
 }
+.list-wraper>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .list-item{
     width: 225px;
     background-color: white;
@@ -204,13 +234,26 @@ main{
     margin: 15px 0;
     /* text-align: center; */
     color: black;
-    padding: 10px;
+    
     transition: 0.5s;
-    background-position: center bottom 23px;
+    background-position: center top 23px;
     background-image: url("./imgs/solar-system.png");
     background-size: 120px 120px;
     background-repeat: no-repeat;
+    position: relative;
 }
+.list-item>div{
+    position: absolute;
+    bottom: 24px;
+    width: 100%;
+    text-align: center;
+    
+}
+.list-item h2{
+    font-size: 31px;
+    text-transform: uppercase;
+}
+
 
 .list-item:hover{
     background-color: var(--color);
@@ -218,6 +261,37 @@ main{
     background-image: url("./imgs/solar-system-invert.png")
 }
 
+.latest-work-wraper{
+    width: 100%;
+    height: 50px;
+    
+    display: grid;
+    grid-template-columns: 352fr 256fr 352fr;
+}
+.latest-work-wraper>div{
+    display: flex;
+    justify-content: center;
+}
+
+.line{
+    height: 0;
+    border: solid 2px black;
+    width: 100%;
+}
+.latest-work{
+    height: 48px;
+    background-color: black;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color:white;
+    width: 256px;
+    border-radius: 10px;
+    font-size: 31px; 
+    margin-top: -24px;
+    text-transform: uppercase;
+    
+}
 
 .blocks-wraper{
     width: 100%;
@@ -225,6 +299,11 @@ main{
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 30px;
     grid-row-gap: 30px;
+}
+.blocks-wraper>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .block{
     border: 5px solid white;
@@ -275,9 +354,14 @@ footer{
     grid-gap: 20px;
     /* background-color: cadetblue; */
 }
+.footer-wraper>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .footer-block{
-    width: 100%;
+    width: 225px;
     height: 388px;
     margin: 15px 0;
     
@@ -289,7 +373,7 @@ footer{
 }
 
 
-.cover-block button{
+.cover-item button{
     background-color:var(--color)(0, 128, 0, 0.6);
     border: 0;
     padding: 15px 10px;
@@ -353,7 +437,7 @@ li:hover{
     color: white;
 }
 section{
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 /* @media only screen and (max-width: 1168px){
@@ -362,7 +446,7 @@ section{
     }
 } */
 
-@media only screen and (max-width: 960px){
+@media only screen and (max-width: 975px){
     .container{
         width: 100%;
     }
@@ -378,7 +462,7 @@ section{
     .list-wraper{
         grid-template-columns: 1fr 1fr;
     }
-    .cover{
+    .cover-item{
         grid-template-columns: 1fr; 
     }
     .image{
@@ -388,4 +472,16 @@ section{
         display: block;
     }
 
+}
+
+@media only screen and (max-width: 645px){
+    .footer-wraper{
+        grid-template-columns: 1fr;
+    }
+    .blocks-wraper{
+        grid-template-columns: 1fr;
+    }
+    .list-wraper{
+        grid-template-columns: 1fr;
+    }
 }
