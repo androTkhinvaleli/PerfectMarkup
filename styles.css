@@ -1,0 +1,433 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --color: #77BF8B;
+    font-family: sans-serif;
+
+}
+body{
+    background-image: url('./imgs/photo6.jpeg');
+    background-position: center;
+    background-size: cover;
+    
+}
+header{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(0,0,0, 0.4);
+    display: flex;
+    
+}
+
+.container{
+    width: 960px;
+    /* height: 100%; */
+    /* background-color: blue; */
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header-wraper{
+    margin-top:15px; 
+    height: 100%;
+    width: 100%;
+    /* background-color: aqua; */
+    display: grid;
+    grid-template-columns: 32fr 64fr;
+
+}
+.logo{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    color: white;
+}
+.lang{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+nav {
+    font-size: 1.1em;
+    width: 100%;
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    
+}
+nav ul li {
+    display: inline-block; /* Arrange list items in horizontal line */
+    list-style-type: none; /* We don't want bullets on our items */
+    margin: 0;
+    padding: 11.5px 0; /* Sets height of nav bar */
+    transition: 0.5s;
+    border-radius: 10px; 
+}
+nav ul li:hover {
+
+    background: var(--color); /* Items' hover bg color */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px;
+    transition: 0.5s;
+
+}
+nav ul li a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.alternative-navbar{
+
+    z-index: 1;
+    font-size: 1.2em;
+    display: none;
+}
+.menu-icon{
+    
+    position: fixed;
+    right: 0;
+    top: 5%;
+    transition: 0.5s;
+}
+.menu-icon img{
+    height: 25px;
+    width: 25px;
+}
+.alt-nav-block {
+    overflow: hidden;
+    position: fixed;
+    right: -100px;
+    top: 5%;
+    transition: 0.5s;
+}
+
+.alt-nav-block ul li{
+    list-style-type: none; /* We don't want bullets on our items */
+    margin: 0;
+    padding: 11.5px 0; /* Sets height of nav bar */
+    transition: 0.5s;
+    border-radius: 10px; 
+}
+
+.alt-nav-block ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 12px;
+    transition: 0.5s;
+}
+.alternative-navbar:hover .menu-icon{
+    right: 100px;
+}
+.alternative-navbar:hover .alt-nav-block{
+    right: 0;
+}
+
+main{
+    width: 100%;
+    
+    /* background-color: gray; */
+    
+}
+
+#cover-section{
+    background-color: rgb(0,0,0, 0.4);
+    padding: 5vh 0;
+
+}
+.cover-wraper{
+    width: 95%;
+
+}
+.arrow{
+    
+    width: 35px;
+    position: absolute;
+    top:45%;
+    right: 0;
+}
+#left-arrow{
+    left: 0;
+    transform: rotate(180deg)
+}
+.cover{ 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 94px;
+}
+.cover > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cover-text{
+    width: 320px;
+    color: white;
+    margin: 45px 0 0 45px;
+}
+.cover-text>h2{
+    font-size: 43px;
+    padding-bottom:20px; 
+}
+.cover-text button{
+    padding: 10px 15px;
+    border: 0;
+    background-color: rgb(119, 191, 139, 0.6);
+    color: white;
+    border-radius: 10px;
+}
+.image{
+    width: 430px;
+    height: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: dimgray;
+    border-radius: 50%;
+    margin-right: 45px;
+}
+.image img{
+    height: 380px;
+    width: 380ox;
+    border-radius:50%; 
+}
+
+.list-wraper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* background-color: aqua; */
+    grid-gap:20px; 
+}
+.list-wraper>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list-item{
+    width: 225px;
+    background-color: white;
+    height: 305px;
+    margin: 15px 0;
+    /* text-align: center; */
+    color: black;
+    
+    transition: 0.5s;
+    background-position: center top 23px;
+    background-image: url("./imgs/solar-system.png");
+    background-size: 120px 120px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.list-item>div{
+    position: absolute;
+    bottom: 24px;
+    width: 100%;
+    text-align: center;
+    
+}
+.list-item h2{
+    font-size: 31px;
+    text-transform: uppercase;
+}
+
+
+.list-item:hover{
+    background-color: var(--color);
+    color: white;
+    background-image: url("./imgs/solar-system-invert.png")
+}
+
+
+.blocks-wraper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    grid-row-gap: 30px;
+}
+.blocks-wraper>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block{
+    border: 5px solid white;
+    height: 200px;
+    width: 300px;
+    background-size: cover;
+    background-position: center center;
+   
+    background-image: url('./imgs/photo7.jpeg');
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.text{
+    position: absolute;
+    bottom: -30px;
+    height: 30px;
+    background-color: rgb(0,0,0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 1.2em;
+    
+}
+.block:hover{
+    border-color:var(--color); 
+}
+.block:hover .text{
+    bottom: 0;
+    transition: 0.5s;
+}
+footer{
+    width: 100%;
+    
+    display: flex;
+    background-color: rgb(50 ,50, 50);
+    /* background-color: dimgray; */
+    border-bottom: solid 1px black; 
+}
+
+.footer-wraper{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    /* background-color: cadetblue; */
+}
+.footer-wraper>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-block{
+    width: 225px;
+    height: 388px;
+    margin: 15px 0;
+    
+    color: white;
+}
+#credits{
+    background-color: rgb(50 ,50, 50);
+    margin: 0;
+}
+
+
+.cover-block button{
+    background-color:var(--color)(0, 128, 0, 0.6);
+    border: 0;
+    padding: 15px 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+button:hover{
+    background-color: var(--color);
+}
+
+.footer-block input{
+    background-color: rgb(0,0,0, 0.4);
+    height: 40px;
+    border: 0;
+    margin: 10px 0;
+    width: 100%;
+    
+    padding: 5px;
+    font-size: 20px;
+}
+/* .list-item img{
+    
+} */
+
+.footer-block li{
+    list-style-type: none;
+    margin: 10px 0;
+    color: var(--color);
+    font-size: 20px;
+    border-bottom: solid 1px rgb(150, 150, 150);
+    padding: 10 0px;
+}
+
+.footer-block span{
+    margin-right: 7px;
+    color: rgb(150, 150, 150)
+}
+.footer-block a{
+    text-decoration: none;
+}
+
+.footer-block input{
+    border-radius: 10px;
+}
+
+.footer-block input[type='submit']{
+    width: 75px;
+    height: 34px;
+    background-color: rgb(119, 191, 139, 0.6);
+    color: white;
+    font-size: 1em;
+}
+
+.footer-block input[type='submit']:hover{
+    background-color: var(--color);
+    
+}
+li:hover{
+    background-color: var(--color);
+    color: white;
+}
+section{
+    margin-bottom: 80px;
+}
+
+/* @media only screen and (max-width: 1168px){
+    .container{
+        width: 100%;
+    }
+} */
+
+@media only screen and (max-width: 975px){
+    .container{
+        width: 100%;
+    }
+    nav{
+        display:none;
+    }
+    .footer-wraper{
+        grid-template-columns: 1fr 1fr;
+    }
+    .blocks-wraper{
+        grid-template-columns: 1fr 1fr;
+    }
+    .list-wraper{
+        grid-template-columns: 1fr 1fr;
+    }
+    .cover{
+        grid-template-columns: 1fr; 
+    }
+    .image{
+        display: none;
+    }
+    .alternative-navbar{
+        display: block;
+    }
+
+}
